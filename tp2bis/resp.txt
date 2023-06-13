@@ -1,0 +1,8 @@
+ las siglas gcc significan: gnu compile collection
+ El proyecto se lanzo el 23 de mayo de  1987
+objetivo: proveer regularmente lanzamientos de alta calidad con los cuales
+trabajar sobre una variedad de objetivos nartivos y cruzados(incluido gnu/linux) y animar a todos a contribuir a cambiar o ayudar al testing de gcc.
+
+POSIX es una serie de normas, estándares y convenciones creadas por la comunidad de usuarios de Unix. 
+Se utilizan con el fin de mejorar la compatibilidad entre diferentes sistemas operativos Unix 
+y proporcionar una base para que las aplicaciones sean más portables entre distintos sistemas operativos

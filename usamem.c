@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -16,23 +15,21 @@ main(){
         exit(1);
     }
     /* RECORREMOS Y MODIFICAMOS TODO EL SEGEMENTO SOLICITADO*/
-    for(j=0; j<BSIZE; j++){
-        for(i=0; i<N; i++){
+    for(i=0; i<BSIZE; i++){
+        for(i=0; i<N; j++){
             *(pp+i*BSIZE+j)=2; // pp[i][j] = 2
         }
     }
 
-    for(j=0; j<BSIZE; j++){
-        for(i=0; i<N; i++){
+    for(i=0; i<N; i++){
+        for(j=0; j<BSIZE; j++){
             if(*(pp+i*BSIZE+j)!=2){ // pp[i][j] = 2
                 printf("ERROR \n");
                 exit(1);
             } 
         }
     }
-    printf("direccion de i: %p, direccion de j: %p",&i, &j);
+    printf("direccion de i: %p, direccion de j: %p direccion main: %p",&i, &j, main);
 
     return ("OK \n");
 }
-
-

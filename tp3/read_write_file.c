@@ -17,7 +17,12 @@ int main(){
         void *ptr;
 
         /*create a shared memory segment*/
+
+
+        //devuelve un file 
         shm_fd= shm_open(name, O_CREAT | O_RDWR, 0666);
+        
+        
         /*configure the size shared memory segment*/
 
         ftruncate(shm_fd, SIZE);
@@ -25,7 +30,7 @@ int main(){
         /*now map the shared memory segment in
         the address space of the process*/
 
-        ptr=mmap(0, SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0 );
+        ptr=mmap(0, SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0 ); //direccion 
 
         if(ptr == MAP_FAILED){
             printf("Map failed\n");

@@ -14,15 +14,15 @@ int main(){
         void *ptr;
 
         /*create a shared memory segment*/
-        shm_fd= shm_open(name, O_RDWR, 0666);
+        shm_fd= shm_open(name, O_RDWR, 0666); //descriptor
         /*configure the size shared memory segment*/
 
-        ftruncate(shm_fd, SIZE);
+        ftruncate(shm_fd, SIZE); // defino tamaño al descriptor 
 
         /*now map the shared memory segment in
         the address space of the process*/
 
-        ptr=mmap(0, SIZE, PROT_READ, MAP_SHARED, shm_fd, 0 );
+        ptr=mmap(0, SIZE, PROT_READ, MAP_SHARED, shm_fd, 0 ); 
 
         if(ptr == MAP_FAILED){
             printf("Map failed\n");
